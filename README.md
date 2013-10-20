@@ -2,7 +2,7 @@
 
 ZADANIE 1
 
-'''c
+```c
 
 main() {
 int i;
