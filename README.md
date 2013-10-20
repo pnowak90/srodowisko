@@ -15,8 +15,21 @@ int main()
     }
 }
 ```
+SRODOWISKO LAB1 ZADANIE 2 - kwadrat
 
-SRODOWISKO LAB1 ZADANIE 2 - wczytywanie liczby + obliczenia
+```c
+int main()
+{
+  int i=1;
+  
+  for(i; i<= 1000; i++)
+    {
+      printf("%d ", i*i);
+    }
+}
+```
+
+SRODOWISKO LAB1 ZADANIE 3 - wczytywanie liczby + obliczenia
 
 ```c
 int main()
@@ -41,7 +54,7 @@ int main()
 
 }
 ```
-SRODOWISKO LAB1 ZADANIE 3 - wczytanie liczby + zabezpieczenie formatu
+SRODOWISKO LAB1 ZADANIE 4 - wczytanie liczby + zabezpieczenie formatu
 
 ```c
 int main()
