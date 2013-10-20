@@ -41,7 +41,29 @@ int main()
 
 }
 ```
+SRODOWISKO LAB1 ZADANIE 3 - wczytanie liczby + zabezpieczenie formatu
 
+```c
+int main()
+{
+  int x;
+  int spr = 0;
+
+  printf("Podaj liczbe: \n");
+
+  do
+  {
+      spr  =  scanf("%d", &x);
+      if(!spr) printf ("Blad formatu!\n");
+      fflush(stdin);
+  }
+  while( spr == 0 );
+    
+
+  printf("Podana liczba to: %d\n", x);
+
+}
+```
 
 SRODOWISKO LAB2 ZADANIE 1 - odwracanie tablicy
 
