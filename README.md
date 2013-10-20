@@ -179,4 +179,29 @@ int main()
 }
 ```
 
+SRODOWISKO LAB2 ZADANIE 4 - dziesietny na binarny z for
 
+```c
+
+main()
+{
+	int liczba 	  =  0;
+	int i 		  =  0;
+	int wynik[16];
+
+	printf ("Podaj liczbe w systemie dziesietnym: ");
+	scanf  ("%d", &liczba);
+
+	for(liczba; liczba > 0; i++)
+	{
+		wynik[i] = liczba%2;
+		printf("Reszta z dzielenia %d przez 2 = %d\n", liczba, wynik[i]);
+		liczba   = liczba/2;
+		printf("Po podzieleniu liczba = %d\n", liczba);
+	}
+
+	printf("\nwynik = ");
+	for(i--; i >= 0; i--) printf(" %d ", wynik[i]);
+
+}
+```
