@@ -280,3 +280,27 @@ int main()
     printf("\n%i", suma);
 }
 ```
+
+SRODOWISKO LAB3 ZADANIE 3 - kolumny
+
+```c
+int main()
+{
+  int n = -1;
+  int i;
+  int k = 0;
+  while( n<0 ){
+                  printf("Podaj liczbe n: ");
+                  scanf("%i", &n);
+  }
+  double tab[n];
+  for(i = 0; i<n; i++)  scanf("%lf", &tab[i]);	
+  // for(i = 0; i<n; i++)  printf("%2.5lf", tab[i]);
+  printf("\n\n");
+  for(k; k<i; k++){
+                   if( (k)%3==0) printf("\n");
+                   printf("%6.2lf ", tab[k]); 
+  }
+  printf("\n");
+ }
+```
