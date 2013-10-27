@@ -205,3 +205,78 @@ main()
 
 }
 ```
+
+SRODOWISKO LAB3 ZADANIE 1 - porownywanie liczb
+
+```c
+
+main()
+{
+  int x = 0;
+  int y = 0;
+  int suma = 0;
+  int i = 1;
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  int obwod = 0;
+
+  printf("Podaj pierwsa liczbe: ");
+  scanf("%i", &x);
+  if(x>5){printf("Liczba %i jest wieksza od 5\n", x);}
+    else {printf("Liczba %i jest mniejsze od 5\n", x);}
+
+  if(x>0){printf("Liczba %i jest wieksza od 0\n", x);}
+    else if(x<0){printf("Liczba %i jest mniejsza od 0\n", x);}
+       else{ printf("Liczba %i jest rowna 0\n", x);}
+
+  if(x%2==0){printf("Liczba %i jest parzysta\n", x);}
+     else{printf("Liczba %i jest nieparzysta\n", x);}
+
+  printf("Podaj druga liczbe: ");
+  scanf("%i", &y);
+  if(x == y){printf("\nLiczby sa sobie rowne");}
+    else{printf("\nLiczby %i i %i nie sa sobie rowne\n", x, y);}
+
+  if(x>y){printf("Liczba x = %i jest wieksza\n", x);}
+  else if(x<y){("Liczba y = %i jest wieksza\n", y);}
+  else{("Liczby sa rowne\n");}
+
+    while(i<=20)
+      {
+	suma += i*i;
+	i++;
+        printf("\nsuma kwadratow  = %i\n", suma);
+      }
+
+   getchar();
+}
+```
+
+SRODOWISKO LAB3 ZADANIE 2 - trojkaty
+
+```c
+
+int main()
+{
+  int a = 1; int b = 1; int c = 1;
+  int obwod = 10;
+  int suma = 0;
+
+    for(a = 1; a < obwod; a++)
+    {
+      for(b = a; b < obwod; b++)
+      {
+	for(c = b; c < obwod; c++)
+	{
+	  if(a+b>c && a+c>b && b+c>a && a+b+c <= obwod)
+	    {
+	    printf("bok a = %i\tbok b = %i\tbok c = %i\tobwod = %i\n", a, b, c, a+b+c);
+	    suma++;
+	    }
+        }
+      }
+    }
+    printf("\n%i", suma);
+}
+```
