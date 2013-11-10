@@ -304,3 +304,110 @@ int main()
   printf("\n");
  }
 ```
+
+SRODOWISKO LAB4 ZADANIE 1 - liczba pierwsza
+```c
+
+int main()
+{
+  int liczba = 0;
+  int dzielnik = 0;
+  int wynik = 0;
+
+  printf("Podaj liczbe: ");
+  scanf("%i", &liczba);
+  
+  for(dzielnik = 2; dzielnik <= liczba - 1; dzielnik++)
+    {
+      if(liczba%dzielnik == 0) wynik++;
+    }
+
+  if(wynik == 0) printf("Liczba %i jest pierwsza\n", liczba);
+        else     printf("liczba %i nie jest pierwsza\n", liczba);
+
+  return 0;
+}
+```
+
+SRODOWISKO LAB4 ZADANIE 2 - M, n najmniejsza liczba taka ze suma do n >= M
+
+```c
+int main()
+{
+  int M = 0;
+  int n = 0;
+  int suma = 0;
+  int wyjscie = 0;
+
+  printf("Podaj liczbe M: ");
+  scanf("%i", &M);
+
+  while(wyjscie == 0)
+    {
+       suma = suma + n;
+       if(suma >= M) wyjscie = 1;
+       n++;
+    }
+  
+  printf("Najmniejsza liczba n = %i", n-1);
+  
+  return 0;
+}
+```
+
+SRODOWISKO LAB4 ZADANIE 3 - wypisuje wszystkie dzielniki (z wyjatkiem 1 i samej siebie, tylko liczby nie-pierwsze)
+
+```c
+int main()
+{
+  int liczba = 0;
+  int dzielnik = 0;
+
+  printf("Podaj liczbe: ");
+  scanf("%i", &liczba);
+  
+  for(dzielnik = 2; dzielnik <= liczba - 1; dzielnik++)
+    {
+      if(liczba%dzielnik == 0) 
+	printf("Liczba %i jest dzielnikiem liczby %i\n", dzielnik, liczba);
+    }
+
+  return 0;
+}
+```
+
+SRODOWISKO LAB3 ZADANIE 4 - konwersja z 10base na inny system (+ konwersja znakow A-F)
+```c
+main()
+{
+    int liczba    =  0;
+    int i         =  0;
+    int system    =  0;
+    int wynik[16];
+
+    char konwersja[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+
+    printf ("Podaj liczbe w systemie dziesietnym: ");
+    scanf  ("%d", &liczba);
+
+    while(system < 2 || system > 16)
+      {
+	printf("Podaj podstawe systemu na jaki chcesz zmienic(od 2 do 16): ");
+	scanf("%d", &system);
+      }
+
+    for(liczba; liczba > 0; i++)
+    {
+        wynik[i] = liczba%system;
+        printf("Reszta z dzielenia %d przez %d  = %d\n", liczba, system, wynik[i]);
+        liczba   = liczba/system;
+        printf("Po podzieleniu liczba = %d\n", liczba);
+    }
+
+    printf("\nwynik = ");
+    for(i--; i >= 0; i--) printf(" %c ", konwersja[ wynik[i] ]);
+
+    printf("\n\n");
+    return 0;
+}
+```
