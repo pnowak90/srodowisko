@@ -300,3 +300,61 @@ int main(){
   return 0;
 }
 ```
+Porownanie leksykograficzne dowolnej liczby tablic
+```c
+
+#include <stdio.h>
+
+int main(){
+
+  int ile_tablic, rozmiar, i, j, ostatnia, przerwanie, max;
+  puts("Ile tablic chcesz wczytac?");
+  scanf("%i", &ile_tablic);
+  puts("Jaki ma byc rozmiar tablicy?");
+  scanf("%i", &rozmiar);
+
+  double tablica[ ile_tablic ][ rozmiar ];
+
+  puts("Rozpoczyna sie inicjalizacja tablic");
+  for(j=0; j<ile_tablic; ++j)
+    {
+      printf("Inicjowanie tablicy nr %i\n", j);
+      for(i=0; i<rozmiar; ++i)
+        {
+          printf("Element nr %i = ", i);
+          scanf("%lf", &tablica[j][i]);
+        }
+    }
+  puts("Inicjalizacja zakonczona sukcesem");
+
+  puts("Rozpoczyna sie porownywanie tablic");
+  przerwanie = 0;
+  i = 0;
+  while( i<=rozmiar && przerwanie == 0)
+    {
+      printf("Sprawdzanie elementow nr %i\n", i);
+      ostatnia = tablica[0][i];
+      max = 0;
+      for(j=1; j<ile_tablic; ++j)
+        {
+          if( tablica[j][i] != ostatnia )
+            {
+              if( tablica[j][i]>ostatnia )
+                {
+                  ostatnia = tablica[j][i];
+                  przerwanie = 1;
+                  max = j;
+                }
+            }
+
+        }
+      ++i;
+    }
+  puts("Porownywanie tablic zakonczone sukcesem");
+
+  if(przerwanie == 0) puts("Wszystkie elementy sa sobie rowne");
+  else printf("najwieksza leksykograficznie jest tablica nr %i\n", max);
+
+  return 0;
+}
+```
