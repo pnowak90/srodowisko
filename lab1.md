@@ -147,3 +147,26 @@ int main(){
 	return 0;
 }
 ```
+Konwersja z 10base na inny system (+ konwersja znakow A-F)
+```c
+main(){
+    int liczba, system, i, wynik[16];
+	char konwersja[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+	printf("Podaj liczbe w systemie dziesietnym: ");
+    scanf("%d", &liczba);
+	while(system<2 || system>16){
+		printf("Podaj podstawe systemu na jaki chcesz zmienic(od 2 do 16): ");
+		scanf("%d", &system);
+    }
+    for(liczba; liczba>0; ++i){
+        wynik[i]=liczba%system;
+        printf("Reszta z dzielenia %d przez %d  = %d\n", liczba, system, wynik[i]);
+        liczba=liczba/system;
+        printf("Po podzieleniu liczba = %d\n", liczba);
+    }
+    printf("\nwynik = ");
+    for(i--; i>=0; i--) printf(" %c ", konwersja[ wynik[i] ]);
+    printf("\n\n");
+    return 0;
+}
+```
