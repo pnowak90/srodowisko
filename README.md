@@ -238,3 +238,26 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+#ROZWIAZANIA LAB 5
+Iloczyn skalarny poszczególnych elementów dwóch tablic
+```c
+int main(){
+  	int rozmiar, i;
+  	printf("Podaj rozmiar tablicy: ");
+  	scanf("%i", &rozmiar);
+  	double t1[rozmiar], t2[rozmiar], wynik;
+  	for(i=0; i<rozmiar; ++i){
+		printf("Podaj parametr tablicy 1 elementu %d: ", i);
+    	scanf("%lf", &t1[i]);
+    	printf("Podaj parametr tablicy 2 elementu %d: ", i);
+    	scanf("%lf", &t2[i]);
+    }
+	puts("\nZakonczono wczytywanie wszystkich elementow\n");
+  	wynik = 0;
+  	for(i=0; i<rozmiar; ++i){
+    	wynik += t1[i]*t2[i];
+    	printf("\nIloczyn skalarny elementow nr %i = %lf:\n ", i, wynik);
+  	}
+  	return 0;
+}
+```
