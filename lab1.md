@@ -119,3 +119,18 @@ int main(){
   return 0;
 }
 ```
+najmniejsza liczba taka ze suma do n >= M
+```c
+int main(){
+	int M, n = 0, suma = 0, wyjscie = 0;
+	printf("Podaj liczbe M: ");
+  	scanf("%i", &M);
+	while(!wyjscie){
+    	suma+=n;
+       	if(suma>=M) wyjscie = 1;
+       	++n;
+    }
+  	printf("Najmniejsza liczba n = %i", n-1);
+  	return 0;
+}
+```
