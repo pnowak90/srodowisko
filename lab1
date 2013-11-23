@@ -1,0 +1,10 @@
+`c
+/*Program wypisuje kolejno kwadraty 50 liczb naturalnych włączając 0*/
+int main(){
+	int x[50],i;
+  	for(i=0; i<50; i++){
+      x[i]=i;
+      printf("Kwadrat liczby %d wynosi %d\n", x[i], x[i]*x[i]);
+    }
+}
+`
