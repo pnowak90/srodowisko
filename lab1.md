@@ -103,3 +103,18 @@ int main(){
   printf("\n");
  }
  ```
+Program sprawdza czy liczba jest pierwsza
+```c
+int main(){
+	int liczba, dzielnik, wynik = 0;
+	printf("Podaj liczbe (nie mniejsza jak 2): ");
+  	scanf("%i", &liczba);
+  	for(dzielnik=2; dzielnik<liczba; dzielnik++)
+      if(liczba%dzielnik == 0) wynik++;
+
+  	if(!wynik) printf("Liczba %i jest pierwsza\n", liczba);
+        else printf("liczba %i nie jest pierwsza\n", liczba);
+
+  return 0;
+}
+```
