@@ -199,9 +199,6 @@ int main (int argc, char *argv[]){
 ```
 Do pliku podanego z linii argumentów zapisywanie trzech kolumn liczb
 ```c
-#include <stdio.h>
-#include <stdlib.h>
-
 int main(int argc, char *argv[]){
   	double tab1[11], tab2[11], tab3[11];
   	int i;
@@ -216,4 +213,5 @@ int main(int argc, char *argv[]){
   	for(i=0; i<=10; i++) fprintf(FOUT, "%6.2f\t%6.2f\t%6.2f\n", tab1[i],tab2[i],tab3[i]);
 	fclose(FOUT);
   	return 0;
-}```
+}
+```
