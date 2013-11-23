@@ -1,20 +1,4 @@
-#ROZWIAZANIA
 
-SRODOWISKO LAB1 ZADANIE 1 - kwadrat liczby
-
-```c
-int main()
-{
-  int x[50] = {0};
-  int i     = 0;
-
-  for(x[i]; i<50; i++)
-    {
-      x[i]=i;
-      printf("Kwadrat liczby %d wynosi %d\n", x[i], x[i]*x[i]);
-    }
-}
-```
 SRODOWISKO LAB1 ZADANIE 2 - kwadrat
 
 ```c
