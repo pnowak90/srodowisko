@@ -22,3 +22,13 @@ int main(){
 	printf("Podana liczba to: %d\n", x);
 }
 ```
+#ROZWIAZANIA LAB 2
+Wypisywanie tablicy w odwrotnej kolejności
+```c
+main(){
+	int tabela[] = {1,2,4,6,12}, i;
+	for(i=sizeof(tabela)/sizeof(int)-1 ; i>=0; --i)
+		printf("%i\n", tabela[i]);
+	return 0;
+}
+```
