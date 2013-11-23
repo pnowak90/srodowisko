@@ -32,3 +32,17 @@ main(){
 	return 0;
 }
 ```
+Suma kwadratów + zabezpieczenie formatu
+```c
+main(){
+	int n=0, i, suma=0, spr=0;
+	do{
+		printf("Podaj liczbe naturalna n: ");
+	  	spr=scanf("%d", &n);
+	  	if(n<=0) printf ("\nLiczba n musi byc wieksza od 0!\n");
+	  	fflush(stdin);
+	}while(spr==0 || n<=0);
+	for(i=1; i<=n; ++i) suma+=i*i;	
+	printf("\nSuma kwadratow = %d\n\n", suma);
+} 
+```
