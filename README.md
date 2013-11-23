@@ -172,8 +172,6 @@ main(){
 ```
 Kopiowanie zawartosci jednego pliku do drugiego
 ```c
-#include <stdio.h>
-
 int main (int argc, char *argv[]){
 	FILE *fin;   /* uchwyt do pliku wejściowego */
   	FILE *fout;  /* uchwyt do pliku wyjściowego */
