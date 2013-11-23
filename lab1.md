@@ -85,3 +85,21 @@ int main()
     return 0;
 }
 ```
+Wypisywanie liczb w trzech kolumnach
+```c
+int main(){
+  	int n=-1, i, k;
+  	while( n<0 ){
+		printf("Podaj liczbe n: ");
+        scanf("%i", &n);
+  	}
+  	double tab[n];
+  	for(i=0; i<n; ++i) scanf("%lf", &tab[i]);	
+  	printf("\n\n");
+  	for(k=0; k<i; k++){
+    	if(!(k%3)) printf("\n");
+        printf("%6.2lf ", tab[k]); 
+  	}
+  printf("\n");
+ }
+ ```
