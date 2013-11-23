@@ -217,9 +217,6 @@ int main(int argc, char *argv[]){
 ```
 Program generuje 1000 losowych liczb z danego zakresu i na bierząco zapisuje do pliku nowy.txt w dwóch kolumnach wygenerowana liczbe i aktualna srednia
 ```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 int main(int argc, char *argv[])
 {	
 	const int rozmiar = 1000;
