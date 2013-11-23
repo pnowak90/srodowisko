@@ -261,3 +261,44 @@ int main(){
   	return 0;
 }
 ```
+Porównanie leksykograficzne dwóch tablic
+```c
+#include <stdio.h>
+
+int main(){
+
+  int rozmiar, i, wyjscie;
+  printf("Podaj rozmiar tablicy: ");
+  scanf("%i", &rozmiar);
+
+  double t1[rozmiar], t2[rozmiar];
+  for(i=0; i<rozmiar; ++i)
+    {
+    printf("Podaj parametr tablicy 1 elementu %d: ", i);
+    scanf("%lf", &t1[i]);
+    }
+  for(i=0; i<rozmiar; ++i)
+    {
+    printf("Podaj parametr tablicy 2 elementu %d: ", i);
+    scanf("%lf", &t2[i]);
+    }
+  puts("\nZakonczono wczytywanie wszystkich elementow\n");
+
+  i = 0;
+  wyjscie = 0;
+  while(i<rozmiar && wyjscie == 0)
+    {
+      if( t1[i]!=t2[i] )
+        {
+          puts("Tablice nie sa sobie rowne");
+          if( t1[i]<t2[i] ) puts("tablica t1 poprzedza leksykograficznie tablice t2");
+          else puts("tablica t2 poprzedza leksykograficznie tablice t1");
+          wyjscie = 1;
+        }
+      ++i;
+    }
+  if(wyjscie == 0 ) puts("Wszystkie elementy obu tablic sa sobie rowne");
+
+  return 0;
+}
+```
