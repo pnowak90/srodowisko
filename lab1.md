@@ -134,3 +134,16 @@ int main(){
   	return 0;
 }
 ```
+Program wypisuje wszystkie dzielniki (z wyjatkiem 1 i samej siebie, tylko liczby nie-pierwsze)
+```c
+int main(){
+	int liczba, dzielnik;
+  	printf("Podaj liczbe: ");
+  	scanf("%i", &liczba);
+  	for(dzielnik=2; dzielnik<liczba; ++dzielnik){
+      	if(!(liczba%dzielnik)) 
+			printf("Liczba %i jest dzielnikiem liczby %i\n", dzielnik, liczba);
+    }	
+	return 0;
+}
+```
