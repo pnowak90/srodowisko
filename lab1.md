@@ -59,3 +59,29 @@ int main(){
 return 0;
 }
 ```
+#ROZWIAZANIA LAB 3
+Trojkaty. Program wypisuje ile jest trojkatow o niepowtarzajacych sie dlugosciach boku dajacych dany obwod.
+```c
+int main()
+{
+  int a, b, c, obwod, spr, suma = 0;
+	do{
+		puts("Podaj rzadany obwod:");
+		spr=scanf("%i", &obwod);
+		puts("");
+		fflush(stdin);
+	}while( spr == 0 || obwod <= 4);
+    for(a=1; a<obwod; ++a){
+    	for(b=a; b<obwod; ++b){
+			for(c=b; c<obwod; ++c){
+	  			if(a+b>c && a+c>b && b+c>a && a+b+c==obwod){
+	    			printf("bok a = %i\tbok b = %i\tbok c = %i\tobwod = %i\n", a, b, c, a+b+c);
+	    			suma++;
+	    		}
+        	}
+      	}
+    }
+    printf("\n%i", suma);
+    return 0;
+}
+```
