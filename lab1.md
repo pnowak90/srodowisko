@@ -103,6 +103,7 @@ int main(){
   printf("\n");
  }
  ```
+#ROZWIAZANIA LAB 4
 Program sprawdza czy liczba jest pierwsza
 ```c
 int main(){
