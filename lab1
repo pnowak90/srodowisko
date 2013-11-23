@@ -1,3 +1,4 @@
+#ROZWIAZANIA
 ```c
 /*Program wypisuje kolejno kwadraty 50 liczb naturalnych włączając 0*/
 int main(){
@@ -7,4 +8,4 @@ int main(){
       printf("Kwadrat liczby %d wynosi %d\n", x[i], x[i]*x[i]);
     }
 }
-`
+```
