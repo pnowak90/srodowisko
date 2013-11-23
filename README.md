@@ -263,8 +263,6 @@ int main(){
 ```
 Porównanie leksykograficzne dwóch tablic
 ```c
-#include <stdio.h>
-
 int main(){
 
   int rozmiar, i, wyjscie;
