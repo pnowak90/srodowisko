@@ -197,3 +197,23 @@ int main (int argc, char *argv[]){
 	return 0;
 }
 ```
+Do pliku podanego z linii argumentów zapisywanie trzech kolumn liczb
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]){
+  	double tab1[11], tab2[11], tab3[11];
+  	int i;
+  	FILE *FOUT;
+	for(i=0; i<=10; i++) tab1[i]=i*0.1;
+  	for(i=0; i<=10; i++) tab2[i]=tab1[i]*tab1[i];
+  	for(i=0; i<=10; i++){
+      	tab3[i]=random() % 100;
+      	tab3[i]/=100;
+	}
+  	FOUT=fopen(argv[1],"w");
+  	for(i=0; i<=10; i++) fprintf(FOUT, "%6.2f\t%6.2f\t%6.2f\n", tab1[i],tab2[i],tab3[i]);
+	fclose(FOUT);
+  	return 0;
+}```
