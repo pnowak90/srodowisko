@@ -2,7 +2,6 @@
 Program wypisuje kolejno kwadraty 50 liczb naturalnych włączając 0
 
 ```c
-Program wypisuje kolejno kwadraty 50 liczb naturalnych włączając 0
 int main(){
 	int x[50],i;
   	for(i=0; i<50; i++){
