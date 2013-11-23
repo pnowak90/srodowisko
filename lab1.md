@@ -1,4 +1,4 @@
-#ROZWIAZANIA
+#ROZWIAZANIA LAB 1
 Program wypisuje kolejno kwadraty 50 liczb naturalnych włączając 0
 ```c
 int main(){
