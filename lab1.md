@@ -46,3 +46,16 @@ main(){
 	printf("\nSuma kwadratow = %d\n\n", suma);
 } 
 ```
+Potęgi liczby 2, wykorzystanie for i while
+```c
+int main(){
+  	int n;
+	for(n=1; n<=2010; n=n*2) printf("%d\n", n);
+	n=1;
+	while(n<=2010){ 
+    	printf("%d\n", n);
+    	n *= 2;
+  	}
+return 0;
+}
+```
