@@ -465,8 +465,6 @@ int main(){
 ```
 Modyfikacja poprzedniego programu, wykorzystanie funkcji + czyszczenie bufora dla błędu formatu.
 ```c
-#include <stdio.h>
-
 void funkcja(int argument){
 
   switch(argument){
@@ -486,7 +484,6 @@ int main(){
   while(1){
     puts("Podaj dzisiejszy dzien tygodnia (1-7), 0 wylacza program : ");
     scanf("%i", &dzien_tygodnia);
-    printf("Podales dzien tygodnia numer %i\n", dzien_tygodnia);
 
     if(!dzien_tygodnia){
       puts("KONIEC PRACY PROGRAMU");
@@ -497,6 +494,9 @@ int main(){
        fflush(stdin);
        continue;
     }
+
+    puts("Dzisiaj jest: ");
+    funkcja(dzien_tygodnia);
 
     puts("Ile dni ma uplynac?");
     scanf("%i", &za_ile);
@@ -511,4 +511,5 @@ int main(){
   }
   return 0;
 }
+
 ```
