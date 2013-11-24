@@ -513,3 +513,21 @@ int main(){
 }
 
 ```
+Ćwiczenie z wykorzystaniem funkcji
+```c
+int wprowadz(void){
+  int N;
+  puts("Podaj ile razy chcesz wypisac \"Dzien Dobry\": ");
+  scanf("%i", &N);
+  return N;
+}
+void funkcja(int argument){
+  int i;
+  for(i=0; i<argument; ++i) puts("Dzien Dobry");
+}
+
+int main(){
+  funkcja( wprowadz() );
+  return 0;
+}
+```
