@@ -531,3 +531,27 @@ int main(){
   return 0;
 }
 ```
+Silnia z ciekawym wykorzystaniem funkcji
+```c
+#include <stdio.h>
+
+int wprowadz(void){
+  int x;
+  puts("Podaj x:");
+  scanf("%i", &x);
+  printf("Silnia liczby %i.", x);
+  return x;
+}
+int silnia(int argument){
+  int wynik=1, i;
+  if(argument) for(i=1; i<=argument; ++i) wynik*=i;
+  return wynik;
+}
+
+int main(){
+
+  printf("..wynosi %i\n", silnia(wprowadz()) );
+
+  return 0;
+}
+```
