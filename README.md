@@ -302,11 +302,7 @@ int main(){
 ```
 Porownanie leksykograficzne dowolnej liczby tablic
 ```c
-
-#include <stdio.h>
-
 int main(){
-
   int ile_tablic, rozmiar, i, j, ostatnia, przerwanie, max;
   puts("Ile tablic chcesz wczytac?");
   scanf("%i", &ile_tablic);
@@ -356,5 +352,43 @@ int main(){
   else printf("najwieksza leksykograficznie jest tablica nr %i\n", max);
 
   return 0;
+}
+```
+Szyfr Cezara. Program jako poprawne traktuje tylko małe i duże litery, inne znaki traktuje jako błąd.
+```c
+int main(){
+   const int max_sz = 100;
+   char slowo[ max_sz ];
+   int i, przerwanie, blad = 1;
+
+   while( blad == 1){
+      puts("Podaj slowo do zaszyfrowania: ");
+      scanf("%s", slowo);
+      printf("Podane slowo to: %s\n", slowo);
+      puts("Rozpoczecie sprawdzania poprawnosci slowa");
+      i = 0;
+      while( slowo[i] != 0 && blad == 1){
+	  if( (slowo[i] < 65) || (slowo[i] > 90 && slowo[i] < 97) || (slowo[i] > 122) )
+	    puts("Uzyles niedozwolonych znakow, sprobuj jeszcze raz!");
+	  else blad = 0;
+	  ++i;
+       }
+   puts("Zakonczenie sprawdzania poprawnosci slowa");
+   }
+  puts("Rozpoczecie szyfrowania");
+  przerwanie = 0;
+  i = 0;
+  while( przerwanie == 0){
+      if( slowo[i] == 0) przerwanie = 1;
+      else{
+	  slowo[i] += 1;
+	  if( slowo[i] > 122 ) slowo[i] -= 26;
+      }
+      ++i;
+   }
+  puts("Zakonczenie szyfrowania");
+  printf("Zaszyfrowane slowo wyglada tak: %s\n", slowo);
+
+  return 0;  
 }
 ```
