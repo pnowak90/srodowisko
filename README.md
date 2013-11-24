@@ -392,3 +392,74 @@ int main(){
   return 0;  
 }
 ```
+#ROZWIAZANIA LAB 6
+Ćwiczenie na instrukcje switch
+```c
+int main()
+{
+  int x, i;
+  while(1){
+    puts("Podaj liczbe: ");
+    scanf("%i",&x);
+    printf("Podales liczbe: %i\nWYKONANE POLECENIE: ", x);
+    switch(x){
+        case 1:  puts("A"); break;
+        case 2:  puts("C"); break;
+        case 3:  puts("F"); break;
+        case 4:  puts("ZWLOKA CZASOWA, CZEKAJ!"); 
+	         for(i=0; i<10000*10000; ++i)138946546486; break;
+        case 0:  puts("WYJSCIE"); return 0; 
+	         puts("To sie nie wyswietli"); break;
+        default: puts("Nieznana komenda!"); break;
+    }
+  }
+  printf("Wyszedles z programu, podales liczbe 0", x);
+  return 0;
+}
+```
+Program wyswietla jaki dzien tygodnia od podanego bedzie za okreslona liczbe dni
+```c
+#include <stdio.h>
+int main(){
+  int dzien_tygodnia, za_ile, next;
+  while(1){
+    puts("Podaj dzisiejszy dzien tygodnia (1-7), 0 wylacza program : ");
+    scanf("%i", &dzien_tygodnia);
+    printf("Podales dzien tygodnia numer %i\n", dzien_tygodnia);
+
+    if(!dzien_tygodnia){
+      puts("KONIEC PRACY PROGRAMU");
+      break;
+    }
+
+    if(dzien_tygodnia<0 || dzien_tygodnia>7){
+       puts("ZLY DZIEN, BLAD!");
+       continue;
+    }
+
+    puts("Ile dni ma uplynac?");
+    scanf("%i", &za_ile);
+
+    next=dzien_tygodnia+za_ile%7;
+    while(next>7){
+      next=next%7;
+    }
+
+    printf("Za %i dni bedzie: ", za_ile);
+
+   switch(next){
+     case 1:  puts("Poniedzialek"); break;
+     case 2:  puts("Wtorek"); break;
+     case 3:  puts("Sroda"); break;
+     case 4:  puts("Czwartek"); break;
+     case 5:  puts("Piatek"); break;
+     case 6:  puts("Sobota"); break;
+     case 7:  puts("Niedziela");break;
+    default: puts("BLAD!"); break;
+   }
+
+   next = 0;
+ }
+  return 0;
+}
+```
