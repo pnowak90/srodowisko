@@ -553,3 +553,24 @@ int main(){
 }
 
 ```
+Praca na tabliach
+```c
+int main(){
+  const int size = 10;
+  int tablica[ size ], i, max, suma = 0;
+  srand (time(NULL));
+  for(i=0; i<size; ++i) tablica[i]=random() % 100;
+  for(i=0; i<size; ++i) printf("%i\n", tablica[i]);
+  
+  max=tablica[0];
+  for(i=0; i<size; ++i){
+    tablica[i]>max ? max=tablica[i] : max;
+    suma+=tablica[i];
+  }
+
+  printf("Najwieksza liczba to %i\n", max);
+  printf("Suma wszystkich liczb to %i\n", suma);
+
+  return 0;
+}
+```
