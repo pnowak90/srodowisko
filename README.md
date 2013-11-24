@@ -463,3 +463,52 @@ int main(){
   return 0;
 }
 ```
+Modyfikacja poprzedniego programu, wykorzystanie funkcji + czyszczenie bufora dla błędu formatu.
+```c
+#include <stdio.h>
+
+void funkcja(int argument){
+
+  switch(argument){
+     case 1:  puts("Poniedzialek"); break;
+     case 2:  puts("Wtorek"); break;
+     case 3:  puts("Sroda"); break;
+     case 4:  puts("Czwartek"); break;
+     case 5:  puts("Piatek"); break;
+     case 6:  puts("Sobota"); break;
+     case 7:  puts("Niedziela");break;
+     default: puts("BLAD!"); break;
+   }
+}
+
+int main(){
+  int dzien_tygodnia, za_ile, next;
+  while(1){
+    puts("Podaj dzisiejszy dzien tygodnia (1-7), 0 wylacza program : ");
+    scanf("%i", &dzien_tygodnia);
+    printf("Podales dzien tygodnia numer %i\n", dzien_tygodnia);
+
+    if(!dzien_tygodnia){
+      puts("KONIEC PRACY PROGRAMU");
+      break;
+    }
+    if(dzien_tygodnia<0 || dzien_tygodnia>7){
+       puts("ZLY DZIEN, BLAD!");
+       fflush(stdin);
+       continue;
+    }
+
+    puts("Ile dni ma uplynac?");
+    scanf("%i", &za_ile);
+
+    next=dzien_tygodnia+za_ile%7;
+    while(next>7){
+      next=next%7;
+    }
+    printf("Za %i dni bedzie: ", za_ile);
+    funkcja(next);
+    next = 0;
+  }
+  return 0;
+}
+```
